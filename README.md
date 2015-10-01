@@ -7,7 +7,7 @@ distances between two points.
 Example
 -------
 
-```
+```go
 package main
 
 import (
