@@ -37,6 +37,10 @@ type Point struct {
 	Lon float64
 }
 
+func (p Point) MetresTo(remote Point) Metres {
+	return Distance(p, remote)
+}
+
 func (p Point) Delta(point Point) Delta {
 	return Delta{
 		Lat: p.Lat - point.Lat,
