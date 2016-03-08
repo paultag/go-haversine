@@ -16,16 +16,10 @@ import (
 )
 
 func main() {
-	fmt.Printf("%f\n", float64(
-		haversine.Point{ /* White House */
-			Lat: 38.89768,
-			Lon: -77.03653,
-		}.MetresTo(
-			haversine.Point{ /* 18th & F St, NE */
-				Lat: 38.89736,
-				Lon: -77.04173,
-			},
-		),
-	)) /* 451.41 Metres (float64) */
+	whiteHouse := haversine.Point{Lat: 38.89768, Lon: -77.03653}
+	eighteenAndF := haversine.Point{Lat: 38.89736, Lon: -77.04173}
+
+	fmt.Printf("%f\n", float64(whiteHouse.MetresTo(eighteenAndF)))
+	/* 451.41 Metres (float64) */
 }
 ```
