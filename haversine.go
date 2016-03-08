@@ -28,7 +28,7 @@ var earthRadiusMetres float64 = 6371000
 
 type Metres float64
 
-func DegreesToRadians(degrees float64) float64 {
+func degreesToRadians(degrees float64) float64 {
 	return degrees * math.Pi / 180
 }
 
@@ -50,8 +50,8 @@ func (p Point) Delta(point Point) Delta {
 
 func (p Point) toRadians() Point {
 	return Point{
-		Lat: DegreesToRadians(p.Lat),
-		Lon: DegreesToRadians(p.Lon),
+		Lat: degreesToRadians(p.Lat),
+		Lon: degreesToRadians(p.Lon),
 	}
 }
 
