@@ -35,3 +35,12 @@ func TestDistance(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkDistance(b *testing.B) {
+
+	from := Point{Lat: 22.55, Lon: 43.12}
+	to := Point{Lat: 13.45, Lon: 100.28}
+	for i := 0; i < b.N; i++ {
+		_ = Distance(from, to)
+	}
+}
