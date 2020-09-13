@@ -1,24 +1,22 @@
-package haversine_test
+package haversine
 
 import (
 	"testing"
-
-	haversine "github.com/speterson-zoll/go-haversine"
 )
 
 var testsCases = []struct {
-	from           haversine.Point
-	to             haversine.Point
+	from           Point
+	to             Point
 	expectedMeters float64
 }{
 	{
-		haversine.Point{Lat: 22.55, Lon: 43.12},
-		haversine.Point{Lat: 13.45, Lon: 100.28},
+		Point{Lat: 22.55, Lon: 43.12},
+		Point{Lat: 13.45, Lon: 100.28},
 		6094544.408786774,
 	},
 	{
-		haversine.Point{Lat: 51.510357, Lon: -0.116773},
-		haversine.Point{Lat: 38.889931, Lon: -77.009003},
+		Point{Lat: 51.510357, Lon: -0.116773},
+		Point{Lat: 38.889931, Lon: -77.009003},
 		5897658.288856054,
 	},
 }
