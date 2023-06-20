@@ -1,3 +1,5 @@
+> This library is deprecated in favor of [pault.ag/go/geo](https://github.com/paultag/go-geo), which contains a strict superset of the functionality here.
+
 haversine
 =========
 
